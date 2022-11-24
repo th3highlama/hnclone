@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import AppRouter from './router/Router';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,7 +9,7 @@ import Homepage  from './components/Homepage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Homepage />
+    <AppRouter />
   </React.StrictMode>
 );
 
