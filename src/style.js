@@ -27,3 +27,13 @@ export const SearchBar = styled.input`
     border-radius: 5px;
     font-size: 1rem;
 `;
+
+export const SearchResultWrapper = styled.div`
+    width: 60%;
+`;
+
+export const SearchResult = styled.div`
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+`;
