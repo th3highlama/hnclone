@@ -1,6 +1,8 @@
+import { HeaderWrapper } from '../style';
+
 const Header = () => {
     return (
-      <div>HackerNews Clone</div>
+      <HeaderWrapper>HackerNews Clone</HeaderWrapper>
     );
   };
   

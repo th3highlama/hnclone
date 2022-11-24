@@ -1,8 +1,8 @@
 
-import { SearchBar } from './style';
+import { SearchWrapper, SearchBar } from '../style';
 
 const HomePage = () => {
-  return <div><SearchBar /></div>;
+  return <SearchWrapper><SearchBar placeholder='Enter search term' autoFocus /></SearchWrapper>;
 };
 
 export default HomePage;

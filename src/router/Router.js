@@ -3,10 +3,12 @@ import Header from '../components/Header';
 import HomePage from '../components/Homepage';
 import Details from '../components/Details';
 
+import { AppContainer } from '../style';
+
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <div>
+      <AppContainer>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />}>
@@ -14,7 +16,7 @@ const AppRouter = () => {
           <Route path="/details" element={<Details />}>
           </Route>
         </Routes>
-      </div>
+      </AppContainer>
     </BrowserRouter>
   );
 };
