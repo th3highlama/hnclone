@@ -37,3 +37,37 @@ export const SearchResult = styled.div`
     text-align: left;
     margin-bottom: 20px;
 `;
+
+export const PostTitle = styled.div`
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+`;
+
+export const PostInfo = styled.div`
+    font-size: 0.8rem;
+`;
+
+export const PostDetails = styled.span`
+    margin-right: 4px;
+`;
+
+export const DetailWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const DetailTitle = styled.div`
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+`;
+
+export const DetailPoints = styled.div`
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+`;
+
+export const DetailComments = styled.div`
+    margin-left: 50px;
+`;

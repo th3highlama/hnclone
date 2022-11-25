@@ -3,10 +3,10 @@ import { BASE_API_URL } from './constants';
 
 export const getSearchResults = async (query) => {
     try {
-        const posts = await axios.get(
+        const data = await axios.get(
             `${BASE_API_URL}/search?query=${query}`
             );
-            return posts;
+            return data;
     } catch (error) {
         console.log('Error while getting search results.');
     }
@@ -14,8 +14,8 @@ export const getSearchResults = async (query) => {
 
 export const getDetails = async (id) => {
     try {
-        const story = await axios.get(`${BASE_API_URL}/items/${id}`);
-        return story;
+        const details = await axios.get(`${BASE_API_URL}/items/${id}`);
+        return details;
     } catch (error) {
         console.log('Error while getting the details.');
     }

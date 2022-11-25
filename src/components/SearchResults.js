@@ -1,14 +1,13 @@
 import React from 'react';
 import Result from './Result';
-import useDataFetcher from '../hooks/dataFetcher';
+import { usePostsFetcher } from '../hooks/dataFetcher';
 import { useLocation } from "react-router-dom";
 import { SearchResultWrapper } from '../style';
 
-const SearchResults = (props) => {
+const SearchResults = () => {
     const search = useLocation().search;
     const query = new URLSearchParams(search).get('query');
-    const { isLoading, posts } = useDataFetcher(query);
-    
+    const { isLoading, posts } = usePostsFetcher(query);
     return (
     <React.Fragment>
         {isLoading ? (

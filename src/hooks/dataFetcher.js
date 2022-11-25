@@ -1,22 +1,40 @@
 import { useState, useEffect } from 'react';
-import { getSearchResults } from '../utils/network';
+import { getSearchResults, getDetails } from '../utils/network';
 
-const useDataFetcher = (query) => {
-    const [posts, setPosts] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+export const usePostsFetcher = (query) => {
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    setIsLoading(true);
+    getSearchResults(query)
+      .then((posts) => {
+        setPosts(posts.data.hits);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
+  }, [query]);
+
+  return { isLoading, posts };
+};
+
+export const useDetailsFetcher = (query) => {
+    const [details, setDetails] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+  
     useEffect(() => {
         setIsLoading(true);
-        getSearchResults(query)
-        .then((result) => {
-            setPosts(result.data.hits);
+        getDetails(query)
+        .then((details) => {
+            setDetails(details.data);
             setIsLoading(false);
         })
         .catch(() => {
             setIsLoading(false);
         });
     }, [query]);
-    return { isLoading, posts };
-};
-
-export default useDataFetcher;
+  
+    return { isLoading, details };
+  };
