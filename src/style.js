@@ -74,4 +74,5 @@ export const DetailComments = styled.div`
     margin-left: 30px;
     padding-left: 10px;
     border-left: 1px solid;
+    border-bottom: 2px solid #eaeaea;
 `;
