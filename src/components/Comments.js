@@ -6,7 +6,7 @@ export const Comments = (props) => {
     return (
       <DetailComments>
         {props.data.children.map((item) => (
-          <div>
+          <div key={item.id}>
             <DetailComments>
             {Parser(`${item.text}`)}
               {item.children?.length && <Comments data={item} />}

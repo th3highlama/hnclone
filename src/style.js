@@ -54,6 +54,8 @@ export const PostDetails = styled.span`
 export const DetailWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 50px;
 `;
 
 export const DetailTitle = styled.div`
@@ -69,5 +71,7 @@ export const DetailPoints = styled.div`
 `;
 
 export const DetailComments = styled.div`
-    margin-left: 50px;
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left: 1px solid;
 `;
